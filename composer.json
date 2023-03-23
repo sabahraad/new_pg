@@ -1,0 +1,17 @@
+{
+    "name": "aamarpay/payment-gateway",
+    "description": "it is a test payment gateway",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aamarpay\\PaymentGateway\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Raad"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
