@@ -15,7 +15,7 @@ class formController
 
         $url = 'https://sandbox.aamarpay.com/request.php'; // live url https://secure.aamarpay.com/request.php
             $fields = array(
-                'store_id' => 'aamarpaytest', //store id will be aamarpay,  contact integration@aamarpay.com for test/live id
+                'store_id' => $request->store_id, //store id will be aamarpay,  contact integration@aamarpay.com for test/live id
                  'amount' =>$request->amount, //transaction amount
                 'payment_type' => 'VISA', //no need to change
                 'currency' => $request->currency,  //currenct will be USD/BDT
@@ -45,7 +45,7 @@ class formController
                 'opt_b' => 'Akil',
                 'opt_c' => 'Liza', 
                 'opt_d' => 'Sohel',
-                'signature_key' => 'dbb74894e82415a2f7ff0ec3a97e4183'); //signature key will provided aamarpay, contact integration@aamarpay.com for test/live signature key
+                'signature_key' => $request->signature_key); //signature key will provided aamarpay, contact integration@aamarpay.com for test/live signature key
 
                 $fields_string = http_build_query($fields);
 
