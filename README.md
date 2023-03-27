@@ -23,11 +23,11 @@ add providers and aliases in your project config\app.php -
  Create a form and hit the pay route it will redirect you to the Payment Gateway
  
 Mandatory input field name ->
-  cus_name
-  cus_email
-  cus_phone
-  currency 
-  amount
+ 1. cus_name,
+ 2. cus_email,
+ 3. cus_phone,
+ 4. currency ,
+ 5. amount
   
  Go to vendor/aamarpay/src/controllers/formController 
  
