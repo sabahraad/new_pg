@@ -33,10 +33,12 @@ Mandatory input field name ->
  
  set the following field
  
-'store_id' => 'your store id',
-signature_key' => 'your key'
+1. 'store_id' => 'your store id',
+2. signature_key' => 'your key'
 
-Make 3 routes in your project & named them 'success','fail','cancel' and declare them in VerifyCsrfToken file .
+Make 3 routes for successful payment,failed paymnet and canceled case in your project & named them 'success','fail','cancel' 
+
+declare this routes in App\http\Middleware\VerifyCsrfToken file.
 
 
 
