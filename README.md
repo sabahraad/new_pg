@@ -28,13 +28,10 @@ Mandatory input field name ->
  3. cus_phone,
  4. currency ,
  5. amount
-  
- Go to vendor/aamarpay/src/controllers/formController 
+ 6.store_id(Provided by aamarpay)
+ 7.signature_key(Provided by aamarpay)
  
- set the following field
  
-1. 'store_id' => 'your store id',
-2. signature_key' => 'your key'
 
 Make 3 routes for successful payment,failed paymnet and canceled case in your project & named them 'success','fail','cancel' 
 
