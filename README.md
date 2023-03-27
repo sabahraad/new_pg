@@ -27,8 +27,8 @@ Mandatory input field name ->
  2. cus_email,
  3. cus_phone,
  4. currency ,
- 5. amount
- 6.store_id(Provided by aamarpay)
+ 5. amount,
+ 6.store_id(Provided by aamarpay),
  7.signature_key(Provided by aamarpay)
  
  
