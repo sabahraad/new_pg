@@ -16,19 +16,19 @@ class formController
         $url = 'https://sandbox.aamarpay.com/request.php'; // live url https://secure.aamarpay.com/request.php
             $fields = array(
                 'store_id' => 'aamarpaytest', //store id will be aamarpay,  contact integration@aamarpay.com for test/live id
-                 'amount' =>'20', //transaction amount
+                 'amount' =>$request->amount, //transaction amount
                 'payment_type' => 'VISA', //no need to change
-                'currency' => 'BDT',  //currenct will be USD/BDT
+                'currency' => $request->currency,  //currenct will be USD/BDT
                 'tran_id' => rand(1111111,9999999), //transaction id must be unique from your end
-                'cus_name' => 'customer name',  //customer name
-                'cus_email' => 'customeremail@mail.com', //customer email address
+                'cus_name' => $request->cus_name,  //customer name
+                'cus_email' => $request->cus_email, //customer email address
                 'cus_add1' => 'Dhaka',  //customer address
                 'cus_add2' => 'Mohakhali DOHS', //customer address
                 'cus_city' => 'Dhaka',  //customer city
                 'cus_state' => 'Dhaka',  //state
                 'cus_postcode' => '1206', //postcode or zipcode
                 'cus_country' => 'Bangladesh',  //country
-                'cus_phone' => '1231231231231', //customer phone number
+                'cus_phone' => $request->cus_phone, //customer phone number
                 'cus_fax' => 'Not¬Applicable',  //fax
                 'ship_name' => 'ship name', //ship name
                 'ship_add1' => 'House B-121, Road 21',  //ship address
@@ -40,7 +40,7 @@ class formController
                 'desc' => 'payment description', 
                 'success_url' => route('success'), //your success route
                 'fail_url' => route('fail'), //your fail route
-                'cancel_url' => route('form'), //your cancel url
+                'cancel_url' => route('cancel'), //your cancel url
                 'opt_a' => 'Reshad',  //optional paramter
                 'opt_b' => 'Akil',
                 'opt_c' => 'Liza', 
@@ -79,15 +79,5 @@ class formController
         exit;
     } 
 
-    
-    public function success(Request $request){
-
-        $re=$request->all();
-        return redirect()->route('success')->with(['re'=>$re]);
-    }
-
-    public function fail(Request $request){
-        return $request;
-    }
-   
+  
 }
