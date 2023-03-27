@@ -1,5 +1,5 @@
 {
-    "name": "aamarpay/payment-gateway",
+    "name": "raad/payment-gateway",
     "description": "it is a test payment gateway",
     "license": "MIT",
     "autoload": {
